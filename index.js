@@ -5,7 +5,6 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
-import clientRoutes from "./routes/client.js";
 
 // import data dan models (hanya digunakan ketika menginput data ke database)
 // import User from "./models/user.js";
@@ -35,8 +34,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 
-/* Routes */
-app.use("/client", clientRoutes);
 
 /* Mongoose setup */
 mongoose
