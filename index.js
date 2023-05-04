@@ -7,6 +7,7 @@ import helmet from "helmet";
 import morgan from "morgan";
 import clientRoutes from "./routes/client.js";
 import generalRoutes from "./routes/general.js";
+import managementRoutes from "./routes/management.js";
 
 // import data dan models (hanya digunakan ketika menginput data ke database)
 // import User from "./models/user.js";
@@ -39,6 +40,7 @@ app.use(cors());
 /* Routes */
 app.use("/client", clientRoutes);
 app.use("/general", generalRoutes);
+app.use("/management", managementRoutes);
 
 /* Mongoose setup */
 mongoose
